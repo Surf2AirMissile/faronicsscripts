@@ -1,12 +1,10 @@
 # Script made by Sam K - 8-14/25
-# Specify the lab name manually below
-$labName = "L140"
 
 # Get the serial number of the device
 $serialNumber = (Get-WmiObject -Class Win32_BIOS).SerialNumber
 
 # Create the new computer name
-$newName = "$labName-$serialNumber"
+$newName = "$serialNumber"
 
 # Get the current computer name
 $currentName = $env:COMPUTERNAME
